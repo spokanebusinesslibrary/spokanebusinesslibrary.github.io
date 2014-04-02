@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Biz Lib {% if page.title }%} - {{page.title}}{% endif %}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+
+    <link href='http://fonts.googleapis.com/css?family=Ledger' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="./assets/js/vendor/modernizr-2.7.1.min.js"></script>
+  </head>
+  <body>
+    <!--[if lt IE 8]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    
+    {% include header.html %}
+
+    <div class="container" style="font-size:18px;">
+      {% if page.title %}
+      <h1 class="" style="margin-top:0px;">
+        {% if page.date %}
+        <small class="glyphicon glyphicon-hand-right text-info"> </small>
+        {% endif %}
+        {{ page.title }}
+        {% if page.subtitle %}<small>{{page.subtitle}}</small>{% endif %}
+      </h1>
+      {% endif %}
+    
+      {% if page.date %}
+      <div class="panel panel-info" style="border-left-width:4px;">
+        <div class="panel-body">
+        {{ content }}
+        </div>
+      </div>
+      {% else %}
+        {{ content }}
+      {% endif %}
+      
+    </div><!-- /.container -->
+    
+    <hr>
+    
+    <div class="container">
+    	<h4 class="text-muted" style="text-transform:uppercase;" 
+      id="about">About the Library</h4>
+      <p>
+        About section
+      </p>
+      
+      <h4 class="text-muted" style="text-transform:uppercase;" 
+      id="contact">Contact Us</h4>
+      <p>
+        Contact us
+      </p>
+
+      <!--
+      <div class="">
+    		<div class="row">
+          <div class="col-sm-12">
+            <p class="lead text-center text-muted">
+              <span class="bizlib-typeface">Spokane Business Library</span> is a collaboration
+            </p>
+          </div>
+          <div class="col-sm-6">
+        		<p class="">
+              <a class="btn btn-default btn-block" href="{{ site.baseurl }}/make/">
+                <i class="glyphicon glyphicon-info-sign"> </i>
+                Spokane Public Library →
+              </a>
+            </p>
+          </div>
+          <div class="col-sm-6">
+    		    <p class="">
+              <a class="btn btn-default btn-block" href="{{ site.baseurl }}/about/">
+                <i class="glyphicon glyphicon-question-sign"> </i>
+                Spokane County Library District →
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+      -->
+    </div>
+    
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="./assets/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+
+    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+    <script src="./assets/js/jquery.gfeed.js"></script>
+
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/plugins.js"></script>
+    <script src="./assets/js/main.js"></script>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      /*
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X');ga('send','pageview');
+      */
+    </script>
+  </body>
+</html>
+
