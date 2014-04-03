@@ -18,9 +18,15 @@
   background: transparent url('../img/sbl-masthead.png') no-repeat top left;
 }
 
-.feeds, .text-sm {
+.feeds {
+  margin-top: 16px;
   font-size:14px;
 }
+
+.text-sm {
+  font-size:14px;
+}
+
 
 .gfc-tabHeader {
   font-size: 18px;
