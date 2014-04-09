@@ -17,9 +17,10 @@ $(function() {
         }
         */
       });
- 	
+
 	$.localScroll();
 
+	/*
 	$.ajax({ 
 	    url: 'http://api.spokanelibrary.org/v2/feed'
     , data: { params: { 
@@ -35,7 +36,7 @@ $(function() {
 	  })
 	  .always(function() {
 	  });
-
+	*/
 
 	$('#feed-scld').gFeed({  
 		url: 'http://www.scld.org/category/business_and_careers/feed/', 
