@@ -1,0 +1,16 @@
+{% raw %}
+<script id="rss-feed-tmpl" type="text/x-handlebars-template">
+<h5 class="text-muted" style="text-transform:uppercase;">{{title}}</h5>
+{{#each data.feed}}
+  {{#each channel.item}}
+  <div data-timestamp="{{timestamp}}" class="feed">
+    <a href="{{link}}" title="Continue reading at {{../channel.title}}"><strong>{{title}}</strong></a>
+    {{{description}}}
+    <p class="text-right">
+    <a href="{{link}}" class="btn btn-sm btn-link tex-right" title="Continue reading at {{../channel.title}}"><strong>Continue &rarr;</strong></a>
+    </p>
+  </div>
+  {{/each}}
+{{/each}}
+</script>
+{% endraw %}

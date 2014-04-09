@@ -18,9 +18,17 @@
   background: transparent url('../img/sbl-masthead.png') no-repeat top left;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
 .feeds {
   margin-top: 16px;
   font-size:14px;
+}
+
+.feed {
+
 }
 
 .text-sm {

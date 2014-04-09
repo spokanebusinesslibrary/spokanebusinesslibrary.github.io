@@ -707,39 +707,9 @@
 			</div>
 		</div>
 		
-
-
-		<!--
-		<h4 class="text-muted" style="text-transform:uppercase;" 
-		id="blogs">Biz Lib Blogs</h4>
-		<p>
-		</p>
-	-->
-		<!--
-		<div id="feeds" style="font-size:14px;"> 
-    	<a class="feed sr-only" href="http://www.scld.org/category/business_and_careers/feed/">SCLD Business Blog</a> 
-    	<a class="feed sr-only" href="http://blog.spokanelibrary.org/topic/business/feed/atom/">SPL Business Blog</a> 
-    	<div class="alert alert-warning">
-  	  	<b>Loading</b>...
-	    </div>
-		</div> 
-		-->
-		<div class='feeds' id='feed-scld'> </div>
-		
-		<div class='feeds' id='feed-spl'> </div>
-		
-
-		<!--
-		<h4 class="text-center text-muted" style="text-transform:uppercase;" 
-		id="studies">Case Studies</h4>
-		<p>
-		</p>
-		
-		<h4 class="text-center text-muted" style="text-transform:uppercase;" 
-		id="contact">Contact Us</h4>
-		<p>
-		</p>
-		-->
+		<div class='feeds' id='rss-feed'>
+  	  <h5 class='text-muted uppercase'>Loading Business Blogs&hellip;</h5>
+	  </div>
 
 	</div><!-- /.col -->
 
@@ -779,7 +749,24 @@
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
       
+
       
+<script id="rss-feed-tmpl" type="text/x-handlebars-template">
+<h5 class="text-muted" style="text-transform:uppercase;">{{title}}</h5>
+{{#each data.feed}}
+  {{#each channel.item}}
+  <div data-timestamp="{{timestamp}}" class="feed">
+    <a href="{{link}}" title="Continue reading at {{../channel.title}}"><strong>{{title}}</strong></a>
+    {{{description}}}
+    <p class="text-right">
+    <a href="{{link}}" class="btn btn-sm btn-link tex-right" title="Continue reading at {{../channel.title}}"><strong>Continue &rarr;</strong></a>
+    </p>
+  </div>
+  {{/each}}
+{{/each}}
+</script>
+
+
     </div><!-- /.container -->
     
     <hr>
@@ -793,18 +780,15 @@
 
     </div>
     
-    <!--[if (gte IE 6)&(lte IE 8)]>
-      <script src="/assets/js/vendor/respond.min.js"></script>
-    <![endif]-->
-
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="./assets/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
 
     <script src="http://www.google.com/jsapi" type="text/javascript"></script>
     <script src="./assets/js/jquery.gfeed.js"></script>
 
-    <script src="./assets/js/jquery.scrollTo.min.js"></script>
-    <script src="./assets/js/jquery.localScroll.min.js"></script>
+    <script src="./assets/js/vendor/jquery.scrollTo.min.js"></script>
+    <script src="./assets/js/vendor/jquery.localScroll.min.js"></script>
+     <script src="./assets/js/vendor/handlebars.js"></script>
     <script src="./assets/js/bootstrap.min.js"></script>
     <script src="./assets/js/plugins.js"></script>
     <script src="./assets/js/main.js"></script>
