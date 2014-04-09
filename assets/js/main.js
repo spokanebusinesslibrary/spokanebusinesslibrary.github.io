@@ -24,7 +24,7 @@ $(function() {
 	  })
 	  .done(function(obj) {  
   		//console.log(obj);
-			var feeds = { title: 'Business Blogs'
+			var feeds = { title: 'Business Library Blogs'
 	  							, data: obj
 	  						}
 	  	var tmpl = Handlebars.compile( $('#rss-feed-tmpl').html() );

@@ -31,6 +31,15 @@
 
 }
 
+.favicon-scld {
+  margin-top: -4px;
+}
+
+.favicon-spl {
+  margin-top: -4px;
+  width: 16px; height: 16px;
+}
+
 .text-sm {
   font-size:14px;
 }
