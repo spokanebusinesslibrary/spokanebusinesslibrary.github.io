@@ -5,7 +5,8 @@ $(function() {
 											,tabs: false
 											,max: 4 } ); 
  	*/
-	
+	$.localScroll();
+
 	$('#feed-scld').gFeed({  
 		url: 'http://www.scld.org/category/business_and_careers/feed/', 
 		max: 5,
