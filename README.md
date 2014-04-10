@@ -5,8 +5,8 @@ Competitive analysis, technology training, and market research: tools and suppor
 
 This is a collection of links to business resources provided by your local library.
 
-Development: <spokanebusinesslibrary.github.io>
+Development: (spokanebusinesslibrary.github.io)
 
-Production: <spokanebusiness.org>
+Production: (spokanebusiness.org)
 
 Thanks!
