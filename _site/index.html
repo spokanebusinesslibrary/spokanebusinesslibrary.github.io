@@ -117,8 +117,6 @@
 					<b>Supported by City and County business librarians</b>, the resources on this page are available at <em>no cost</em> to residents and organizations in Spokane County and the City of Spokane. 
 				</p>
 
-				
-
 				<p>
 					<button type="button" class="btn btn-block btn-warning" data-toggle="collapse" data-target="#about-bizlib">
 							<b>Read more</b> <span class="hidden-xs">about Spokane Business Library</span>
@@ -677,7 +675,7 @@
 	<!-- SIDEBAR -->
 	<div class="col-sm-4">
 		
-		<h5 class="text-muted uppercase" id="librarian">
+		<h5 class="text-primary uppercase" id="librarian">
 			New to the Library?
 		</h5>
 		<blockquote>
@@ -697,7 +695,7 @@
 			</p>
 		</blockquote>
 
-		<h5 class="text-muted uppercase" id="help">
+		<h5 class="text-primary uppercase" id="help">
 				Question about your card?
 		</h5>
 		<blockquote>
@@ -714,11 +712,17 @@
 			</p>
 		</blockquote>
 
-		<h5 class="text-muted uppercase" id="follow">
-			Follow US
+		<h5 class="text-primary uppercase" id="connect">
+			Connect with us:
 		</h5>
-
 		<h6 class="text-info text-center">Spokane County Library District</h6>
+		<p>
+			<a class="btn btn-block btn-sm btn-info" href="#">
+				<img src="/assets/img/SCLD-favicon.png" class="img-rounded favicon-scld" />
+				<b>County</b> Business Page 
+				<small class="glyphicon glyphicon-arrow-right hidden-xs"> </small>
+			</a>
+		</p>
 		<div class="row">
 			<div class="col-xs-6">
 				<p>
@@ -737,6 +741,13 @@
 		</div>
 		
 		<h6 class="text-success text-center">Spokane Public Library</h6>
+		<p>
+			<a class="btn btn-block btn-sm btn-success" href="#">
+				<img src="/assets/img/SPL-favicon.png" class="img-rounded favicon-spl" />
+				<b>City</b> Business Page 
+				<small class="glyphicon glyphicon-arrow-right hidden-xs"> </small>
+			</a>	
+		</p>
 		<div class="row">
 			<div class="col-xs-6">
 				<p>
@@ -747,12 +758,13 @@
 			</div>
 			<div class="col-xs-6">
 				<p>
-					<a href="#" class="btn btn-sm btn-block btn-default">
+					<a href="#" class="btn btn-block btn-sm btn-default">
 						<img src="/assets/img/icons/16px/twitter.png" />
 						<b class="twitter">Twitter</b></a>
 				</p>
 			</div>
 		</div>
+		<hr />
 		
 		<div id="rss-feed" class="feeds"> </div>
 
@@ -803,15 +815,27 @@
 
       
 <script id="rss-feed-tmpl" type="text/x-handlebars-template">
-<h5 class="text-muted" style="text-transform:uppercase;">{{title}}</h5>
+<h5 class="text-primary" style="text-transform:uppercase;">
+  Business Library News:
+</h5>
+
+<p class="text-muted">
+<i class="glyphicon glyphicon-comment text-bizlib"> </i>
+Our latest blog posts
+</p>
+
 {{#each data.feed}}
   {{#each channel.item}}
   <div data-timestamp="{{timestamp}}" class="feed">
+
     <a href="{{link}}" title="Continue reading at {{../channel.title}}"><strong>{{title}}</strong></a>
+
     {{{description}}}
+
     <p class="text-right">
-    <a href="{{link}}" class="btn btn-sm btn-link tex-right" title="Continue reading at {{../channel.title}}"><strong>Continue &rarr;</strong></a>
+      <a href="{{link}}" class="btn btn-sm btn-link" title="Continue reading at {{../channel.title}}"><strong>Continue &rarr;</strong></a>
     </p>
+
   </div>
   {{/each}}
 {{/each}}

@@ -24,9 +24,8 @@ $(function() {
 	  })
 	  .done(function(obj) {  
   		//console.log(obj);
-			var feeds = { title: 'Business Library Blogs'
-	  							, data: obj
-	  						}
+			var feeds = { data: obj }
+
 	  	var tmpl = Handlebars.compile( $('#rss-feed-tmpl').html() );
 			$rss.hide().html(tmpl(feeds));
 	  })
