@@ -44,27 +44,11 @@
   font-size:14px;
 }
 
-
-.gfc-tabHeader {
-  font-size: 18px;
-}
-
-.gfc-title {
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.gf-title {
-  margin-top: 12px;
-  font-weight: bold;
-  text-decoration: underline;
-}
-
 .bizlib-typeface {
   font-family: 'Ledger';
 }
 
-.bizlib-color {
+.text-bizlib {
   color: #f0ad4e;
 }
 
