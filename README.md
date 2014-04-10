@@ -1,4 +1,8 @@
-spokanebusinesslibrary.github.io
+Spokane Business Library
 ================================
 
-Spokane Business Library
+Competitive analysis, technology training, and market research: tools and support for the Spokane regional business community. 
+
+This is a collection of links to business resources provided by your local library.
+
+Thanks!
