@@ -30,25 +30,8 @@
     {% include header.html %}
 
     <div class="container" style="font-size:18px;">
-      {% if page.title %}
-      <h1 class="" style="margin-top:0px;">
-        {% if page.date %}
-        <small class="glyphicon glyphicon-hand-right text-info"> </small>
-        {% endif %}
-        {{ page.title }}
-        {% if page.subtitle %}<small>{{page.subtitle}}</small>{% endif %}
-      </h1>
-      {% endif %}
-    
-      {% if page.date %}
-      <div class="panel panel-info" style="border-left-width:4px;">
-        <div class="panel-body">
-        {{ content }}
-        </div>
-      </div>
-      {% else %}
-        {{ content }}
-      {% endif %}
+      
+      {{ content }}
 
       {% include handlebars.html %}
 
