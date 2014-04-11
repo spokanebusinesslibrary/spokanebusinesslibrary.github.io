@@ -1,18 +1,23 @@
 
 $(function() {
 
+	// slow down local links
  	$.localScroll();
 
- 	$.ajaxSetup({
-         type: 'POST'
-        ,dataType: 'jsonp'
-        ,jsonp: 'callback'
-      });
-	
+ 	// stub in event tracking
+ 	$('body').on('click', 'a', function(e) {
+ 		e.preventDefault();
+ 		var href = $(this).attr('href');
+
+ 	});
+
+ 	// proxy rss feeds to json, avoid same origin restrictions	
 	var $rss = $('#rss-feed');
-	// proxy rss feeds to json, avoid same origin restrictions
 	$.ajax({ 
-	    url: 'http://api.spokanelibrary.org/v2/feed'
+		  type: 'POST'
+    , dataType: 'jsonp'
+    , jsonp: 'callback'
+	  , url: 'http://api.spokanelibrary.org/v2/feed'
 	  , data: { params: { 
     									limit: 5
     								, chars: 240
@@ -25,7 +30,6 @@ $(function() {
 	  .done(function(obj) {  
   		//console.log(obj);
 			var feeds = { data: obj }
-
 	  	var tmpl = Handlebars.compile( $('#rss-feed-tmpl').html() );
 			$rss.hide().html(tmpl(feeds));
 	  })
@@ -49,6 +53,5 @@ $(function() {
 			});
 			$rss.append(posts).fadeIn();
 	  });
-
 
 });
