@@ -6,7 +6,7 @@ $(function() {
 
  	// stub in event tracking
  	$('body').on('click', 'a', function(e) {
- 		e.preventDefault();
+ 		//e.preventDefault();
  		var href = $(this).attr('href');
 
  	});
