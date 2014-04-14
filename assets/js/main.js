@@ -7,7 +7,24 @@ $(function() {
  	// stub in event tracking
  	$('body').on('click', 'a', function(e) {
  		//e.preventDefault();
+ 		var gaCategory = 'button';
+ 		var gaLabel = 'unknown';
+
  		var href = $(this).attr('href');
+ 		if ( '#' != href ) {
+		 	//ga('send', 'event', 'button', 'click', 'nav-buttons');
+		 	e.preventDefault();
+
+		 	if ( $(this).data('lib-sys') ) {
+		 		gaCategory = $(this).data('lib-sys');
+		 	}
+
+		 	gaLabel = $(this).attr('title');
+		 	
+			ga('send', 'event', 'button', 'click', gaLabel);
+			console.log(gaCategory);
+			console.log(gaLabel);
+ 		}
 
  	});
 
