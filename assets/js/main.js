@@ -4,7 +4,8 @@ $(function() {
 	// slow down local links
  	$.localScroll();
 
- 	// stub in event tracking
+ 	// all non-#links are external, so implement event monitors
+ 	// https://developers.google.com/analytics/devguides/collection/analyticsjs/events
  	$('body').on('click', 'a', function(e) {
  		//e.preventDefault();
  		var gaCategory = 'button';
@@ -12,14 +13,10 @@ $(function() {
 
  		var href = $(this).attr('href');
  		if ( '#' != href ) {
-		 	// e.preventDefault();
-		 	// https://developers.google.com/analytics/devguides/collection/analyticsjs/events
-		 	
 		 	if ( $(this).data('lib-sys') ) {
 		 		gaCategory = $(this).data('lib-sys');
 		 	}
-
-		 	gaLabel = $(this).attr('title');
+			gaLabel = $(this).attr('title');
 		 	
 			ga('send', 'event', gaCategory, 'click', gaLabel, {'page': href});
  		}
