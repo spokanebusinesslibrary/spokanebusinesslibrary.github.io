@@ -10,17 +10,16 @@ $(function() {
  		//e.preventDefault();
  		var gaCategory = 'button';
  		var gaLabel = 'unknown';
-
  		var href = $(this).attr('href');
  		if ( '#' != href ) {
-		 	if ( $(this).data('lib-sys') ) {
-		 		gaCategory = $(this).data('lib-sys');
+		 	if ( $(this).data('lib-system') ) {
+		 		gaCategory = $(this).data('lib-system');
 		 	}
-			gaLabel = $(this).attr('title');
-		 	
+		 	if ( $(this).data('lib-title') ) {
+		 		gaLabel = $(this).data('lib-title');
+		 	}
 			ga('send', 'event', gaCategory, 'click', gaLabel, {'page': href});
  		}
-
  	});
 
  	// proxy rss feeds to json, avoid same origin restrictions	
