@@ -12,18 +12,16 @@ $(function() {
 
  		var href = $(this).attr('href');
  		if ( '#' != href ) {
-		 	//ga('send', 'event', 'button', 'click', 'nav-buttons');
-		 	e.preventDefault();
-
+		 	// e.preventDefault();
+		 	// https://developers.google.com/analytics/devguides/collection/analyticsjs/events
+		 	
 		 	if ( $(this).data('lib-sys') ) {
 		 		gaCategory = $(this).data('lib-sys');
 		 	}
 
 		 	gaLabel = $(this).attr('title');
 		 	
-			ga('send', 'event', 'button', 'click', gaLabel);
-			console.log(gaCategory);
-			console.log(gaLabel);
+			ga('send', 'event', gaCategory, 'click', gaLabel, {'page': href});
  		}
 
  	});
