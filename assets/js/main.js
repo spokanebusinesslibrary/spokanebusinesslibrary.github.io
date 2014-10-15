@@ -33,7 +33,7 @@ $(function() {
     									limit: 5
     								, chars: 240
     								, url: ['http://www.scld.org/category/business_and_careers/feed/'
-    											, 'http://blog.spokanelibrary.org/topic/business/feed/'
+    											, 'http://beta.spokanelibrary.org/blog/topic/business/feed/'
     												]
     									}
     				}
